@@ -12,6 +12,10 @@ body {
     width: 370px;
     margin-top: 50px;
   }
+
+  .footer{
+    margin-top: 1%;
+  }
   
   @media only screen and (max-width: 770px) {
     .container {
