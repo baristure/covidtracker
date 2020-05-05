@@ -1,9 +1,15 @@
 .footer {
     height: 50px;
-    left: 0;
-    bottom: 0;
     width: 100%;
     color: black;
-    text-align: center;
-    margin-top:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1% 0;
+}
+a{
+    box-shadow: 0 5px 0 darkred;
+    text-decoration: none;
+    color: black;
 }
