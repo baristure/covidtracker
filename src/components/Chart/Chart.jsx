@@ -6,31 +6,18 @@ import styles from './Chart.module.css';
 
 const Chart = ({ chartData, country }) => {
   const arr = chartData.data;
-  const countryDates = [];
-  const counrtyConfirmed = [];
-  const countryDeaths = [];
-  if (country) {
-    function getValues() {
-      for (let i = 0; i < arr.length; i++) {
-        countryDates.push(arr[i].Date );
-        counrtyConfirmed.push(arr[i].Confirmed);
-        countryDeaths.push(arr[i].Deaths);
-      }
-    };
-    getValues();
-  }
 
   const countryChart = (
-    <Line
+    arr ? <Line
       data={{
-        labels: countryDates,
+        labels: arr.map(item => item.Date),
         datasets: [{
-          data: counrtyConfirmed,
+          data: arr.map(item => item.Confirmed),
           label: 'Infected',
           borderColor: '#3333ff',
           fill: true,
         }, {
-          data: countryDeaths,
+          data: arr.map(item => item.Deaths),
           label: 'Deaths',
           borderColor: 'red',
           backgroundColor: 'rgba(255, 0, 0, 0.5)',
@@ -38,7 +25,7 @@ const Chart = ({ chartData, country }) => {
         },
         ],
       }}
-    />
+    />:null
   );
 
   return (
