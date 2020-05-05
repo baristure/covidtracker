@@ -3,7 +3,10 @@
     justify-content: center;
     width: 65%;
   }
-  
+  .image {
+    width: 400px;
+    margin-top: 25px;
+  }
   @media only screen and (max-width: 770px) {
     .container {
       width: 100%;

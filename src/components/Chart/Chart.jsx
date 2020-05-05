@@ -1,6 +1,7 @@
 import React from 'react';
 import { Line } from 'react-chartjs-2';
 
+import socialDistance from '../../images/social_distance.png';
 
 import styles from './Chart.module.css';
 
@@ -25,12 +26,13 @@ const Chart = ({ chartData, country }) => {
         },
         ],
       }}
-    />:null
+    />: null
   );
 
+  const image=<img className={styles.image} src={socialDistance} alt="COVID-19" />
   return (
     <div className={styles.container}>
-      {country ? countryChart :null}
+      {country ? countryChart : image }
     </div>
   );
 };
